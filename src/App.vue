@@ -9,6 +9,13 @@
         <div class="navbar-end">
           <template v-if="$store.state.isAuthenticated">
               <router-link to="/dashboard" class="navbar-item">Dashboard</router-link>
+
+              <div class="navbar-item">
+                  <div class="buttons">
+                    <router-link to="/dashboard/my-account" class="button is-light">My Account</router-link>
+                  </div>
+              </div>
+
           </template>
 
           <template v-else>
@@ -25,13 +32,12 @@
       </div>
     </nav>
 
-
     <section class="section">
       <router-view/>
     </section>
 
     <footer class="footer">
-      <p class="has-text-centered">Copyright (c) 2024</p>
+      <p class="has-text-centered"><strong>Copyright Mascot Engineering (c) 2024</strong></p>
     </footer>
   </div>
 </template>
